@@ -10,7 +10,7 @@ import os
 user='Y5YHR7BWFGANIN1J'
 
 #saves the data as csv and returns it
-def _new_save(ticker_name,send_type,path):
+def _new_save(ticke_name,send_type,path):
     
     send="https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={}".\
     format(ticker_name)+"&outputsize={}&apikey={}".format(send_type,user)#the request to send     
