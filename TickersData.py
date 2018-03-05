@@ -25,12 +25,14 @@ def _new_save(ticker_name,send_type,path):
     folder=os.getcwd()+"/data"
     if not os.path.exists(folder):
         os.makedirs(folder)#creates dir for the first time
-    df.to_csv(path,index=False)
+    df.to_csv(path, index=False)
     return df
 
 #collects data saves as csv an returns to user
+
+
 def fetch_ticker(ticker_name,timerange=''):
-    
+
     path=os.getcwd()+"/data/{}.csv".format(ticker_name.upper())#the path to save
     if os.path.exists(path):
         if timerange!='' and timerange!='full':#check that the options are correct
@@ -77,8 +79,8 @@ def get_data_for_ticker_in_range(ticker_name,from_date,to_date,data_type):
     except:
         raise Exception("no columns like this")
     
-print(get_data_for_ticker_in_range('goog','2018-01-02','2018-03-01',\
-                                  ["date","low","open","close","date","close"]))
+# print(get_data_for_ticker_in_range('goog','2018-01-02','2018-03-01',\
+#                                   ["date","low","open","close","date","close"]))
     
 #returns the profit for the user about a ticker in range of dates
 def get_profit_for_ticker_in_range(ticker_name,from_date,to_date,accumulated=False):
