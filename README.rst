@@ -1,2 +1,1 @@
-## stocks
-this is work about stocks
+shows stocks information
